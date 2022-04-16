@@ -1,3 +1,5 @@
+ls $UNITY_INSTALL_DIR
+
 $UNITY_INSTALL_DIR/Unity \
   -batchmode \
   -nographics \
