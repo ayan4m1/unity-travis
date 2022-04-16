@@ -1,6 +1,6 @@
 #! /bin/sh
 
-if [ -f "${UNITY_INSTALL_DIR}/Editor/Unity"]; then
+if [ -f "${UNITY_INSTALL_DIR}/Editor/Unity" ]; then
   echo "Exiting because cached Unity install was found"
   exit 0
 fi
