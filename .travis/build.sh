@@ -1,8 +1,6 @@
 #! /bin/sh
 
-ls $UNITY_INSTALL_DIR
-
-$UNITY_INSTALL_DIR/Unity \
+$UNITY_INSTALL_DIR/Editor/Unity \
   -batchmode \
   -nographics \
   -silent-crashes \
