@@ -1,8 +1,7 @@
 language: generic
 dist: focal
 env:
-  - UNITY_PROJECT_NAME="Test"
-  - UNITY_INSTALL_DIR=/usr/share/unity
+  - UNITY_PROJECT_NAME=Test UNITY_INSTALL_DIR=/usr/share/unity
 cache:
   directories:
     - $UNITY_INSTALL_DIR
