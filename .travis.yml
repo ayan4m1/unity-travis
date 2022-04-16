@@ -2,9 +2,10 @@ language: generic
 dist: focal
 env:
   - UNITY_PROJECT_NAME="Test"
+  - UNITY_INSTALL_DIR=/usr/share/unity
 cache:
   directories:
-    - $UNITY_DOWNLOAD_CACHE
+    - $UNITY_INSTALL_DIR
 before_install:
 - chmod a+x ./.travis/*.sh
 install:

@@ -4,4 +4,4 @@ curl --retry 5 -o UnitySetup https://download.unity3d.com/download_unity/602ecdb
 
 chmod a+x UnitySetup
 
-./UnitySetup
+./UnitySetup --unattended --components=Unity,Windows-Mono --install-location "${UNITY_INSTALL_DIR}"
