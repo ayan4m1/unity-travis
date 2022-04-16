@@ -1,0 +1,23 @@
+env:
+  - UNITY_PROJECT_NAME="Test"
+cache:
+  directories:
+    - $UNITY_DOWNLOAD_CACHE
+before_install:
+- chmod a+x ./.travis/*.sh
+install:
+- ./.travis/install.sh
+script:
+- ./.travis/build.sh
+after_success:
+- ./.travis/export.sh
+before_deploy:
+- UNITY_DEPLOY_PACKAGE="$(ls -a release/*.zip | head -n 1)"
+deploy:
+  provider: releases
+  api_key: $GITHUB_TOKEN
+  file: $UNITY_DEPLOY_PACKAGE
+  skip_cleanup: true
+  overwrite: true
+  on:
+    tags: true
