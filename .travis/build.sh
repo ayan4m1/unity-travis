@@ -6,6 +6,7 @@ $UNITY_INSTALL_DIR/Editor/Unity \
   -silent-crashes \
   -logFile \
   -projectPath "$(pwd)/${UNITY_PROJECT_NAME}" \
+  -username "${UNITY_USER_EMAIL}"
+  -password "${UNITY_USER_PASSWORD}"
   -buildWindows64Player "$(pwd)/build/win64/${UNITY_PROJECT_NAME}.exe" \
-  -quit \
-  | tee "$(pwd)/build/win64.log"
+  -quit
