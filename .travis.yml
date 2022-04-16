@@ -1,3 +1,5 @@
+language: generic
+dist: focal
 env:
   - UNITY_PROJECT_NAME="Test"
 cache:
