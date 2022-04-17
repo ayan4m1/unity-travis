@@ -1,12 +1,14 @@
 #! /bin/sh
 
+xvfb-run --auto-servernum --server-args='-screen 0 640x480x24' \
 $UNITY_INSTALL_DIR/Editor/Unity \
   -batchmode \
-  -nographics \
-  -silent-crashes \
   -logFile \
   -projectPath "$(pwd)/${UNITY_PROJECT_NAME}" \
   -username "${UNITY_USER_EMAIL}" \
   -password "${UNITY_USER_PASSWORD}" \
-  -buildWindows64Player "$(pwd)/build/win64/${UNITY_PROJECT_NAME}.exe" \
+  -buildTarget StandaloneWindows64 \
+  -customBuildTarget StandaloneWindows64 \
+  -customBuildName "${UNITY_PROJECT_NAME}" \
+  -customBuildPath "$(pwd)/build/win64" \
   -quit

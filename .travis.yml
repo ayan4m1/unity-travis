@@ -1,5 +1,7 @@
 language: generic
 dist: focal
+services:
+  - xvfb
 env:
   - UNITY_PROJECT_NAME=Test UNITY_INSTALL_DIR=/tmp/unity
 cache:
