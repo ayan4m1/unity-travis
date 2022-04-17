@@ -11,4 +11,5 @@ $UNITY_INSTALL_DIR/Editor/Unity \
   -customBuildTarget StandaloneWindows64 \
   -customBuildName "${UNITY_PROJECT_NAME}" \
   -customBuildPath "$(pwd)/build/win64" \
+  -executeMethod BuildCommand.PerformBuild \
   -quit
