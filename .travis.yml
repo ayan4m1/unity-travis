@@ -1,4 +1,5 @@
 language: generic
+os: linux
 dist: focal
 services:
   - xvfb
@@ -19,7 +20,7 @@ before_deploy:
   - UNITY_DEPLOY_PACKAGE="$(ls -a release/*.zip | head -n 1)"
 deploy:
   provider: releases
-  api_key: $GITHUB_TOKEN
+  token: $GITHUB_TOKEN
   file: $UNITY_DEPLOY_PACKAGE
   cleanup: false
   overwrite: true
