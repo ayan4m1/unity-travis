@@ -21,7 +21,7 @@ deploy:
   provider: releases
   api_key: $GITHUB_TOKEN
   file: $UNITY_DEPLOY_PACKAGE
-  skip_cleanup: true
+  cleanup: false
   overwrite: true
   on:
     tags: true
