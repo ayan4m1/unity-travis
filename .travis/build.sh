@@ -11,6 +11,10 @@ fi
 
 echo "Starting Unity build..."
 
+BUILD_DIR="$(pwd)/build"
+
+mkdir -p "${BUILD_DIR}"
+
 xvfb-run --auto-servernum --server-args='-screen 0 640x480x24' \
 $UNITY_INSTALL_DIR/Editor/Unity \
   -batchmode \
@@ -19,5 +23,5 @@ $UNITY_INSTALL_DIR/Editor/Unity \
   -projectPath "$(pwd)/${UNITY_PROJECT_NAME}" \
   -username "${UNITY_USER_EMAIL}" \
   -password "${UNITY_USER_PASSWORD}" \
-  -buildWindows64Player "$(pwd)/build/game.exe" \
+  -buildWindows64Player "${BUILD_DIR}/game.exe" \
   -quit
