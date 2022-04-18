@@ -1,6 +1,6 @@
 #! /bin/sh
 
-LICENSE_FILE="./Unity_v2021.x.ulf"
+LICENSE_FILE="$(pwd)/.travis/Unity_v2021.x.ulf"
 
 if [ ! -f "${LICENSE_FILE}" ]; then
   echo "WARNING: No license file found!"
