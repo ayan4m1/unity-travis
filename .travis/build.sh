@@ -1,9 +1,11 @@
 #! /bin/sh
 
+echo "Starting Unity build..."
+
 xvfb-run --auto-servernum --server-args='-screen 0 640x480x24' \
 $UNITY_INSTALL_DIR/Editor/Unity \
   -batchmode \
-  -logFile \
+  -logFile /dev/stdout \
   -projectPath "$(pwd)/${UNITY_PROJECT_NAME}" \
   -username "${UNITY_USER_EMAIL}" \
   -password "${UNITY_USER_PASSWORD}" \
