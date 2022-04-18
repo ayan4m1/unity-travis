@@ -19,9 +19,5 @@ $UNITY_INSTALL_DIR/Editor/Unity \
   -projectPath "$(pwd)/${UNITY_PROJECT_NAME}" \
   -username "${UNITY_USER_EMAIL}" \
   -password "${UNITY_USER_PASSWORD}" \
-  -buildTarget StandaloneWindows64 \
-  -customBuildTarget StandaloneWindows64 \
-  -customBuildName "${UNITY_PROJECT_NAME}" \
-  -customBuildPath "$(pwd)/build/win64" \
-  -executeMethod BuildCommand.PerformBuild \
+  -buildWindows64Player "$(pwd)/build/game.exe" \
   -quit
