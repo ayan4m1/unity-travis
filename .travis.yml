@@ -18,7 +18,7 @@ script:
 after_success:
   - ./.travis/export.sh
 before_deploy:
-  - UNITY_DEPLOY_PACKAGE="$(ls -a release/*.zip | head -n 1)"
+  - UNITY_DEPLOY_PACKAGE="$(ls -a ./build*.zip | head -n 1)"
 deploy:
   provider: releases
   token: $GITHUB_TOKEN
