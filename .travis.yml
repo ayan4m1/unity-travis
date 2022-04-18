@@ -10,7 +10,7 @@ cache:
     - $UNITY_INSTALL_DIR
 before_install:
   - chmod a+x ./.travis/*.sh
-  - openssl aes-256-cbc -K $encrypted_43ad63431c04_key -iv $encrypted_43ad63431c04_iv -in .travis/Unity_v2021.x.ulf.enc -out .travis/Unity_v2021.x.ulf -d -md md5
+  - openssl aes-256-cbc -K $encrypted_43ad63431c04_key -iv $encrypted_43ad63431c04_iv -in .travis/Unity_v2021.x.ulf.enc -out .travis/Unity_v2021.x.ulf -d -md sha256
 install:
   - ./.travis/install.sh
 script:
